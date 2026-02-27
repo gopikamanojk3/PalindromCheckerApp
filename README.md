@@ -1,1 +1,1 @@
-# PalindromCheckerApp
+# PalindromeCheckerApp
