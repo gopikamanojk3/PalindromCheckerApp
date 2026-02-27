@@ -1,17 +1,19 @@
 import java.util.*;
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
-
-
-        String input = "noon";
+        String input = "civic";   // change word here
+        Queue<Character> queue = new LinkedList<>();
         Stack<Character> stack = new Stack<>();
-
-        for (char c : input.toCharArray()) {
+        for (char c : input.toCharArray())
+        {
+            queue.add(c);
             stack.push(c);
         }
         boolean isPalindrome = true;
-        for (char c : input.toCharArray()) {
-            if (c != stack.pop()) {
+        while (!queue.isEmpty())
+        {
+            if (queue.remove() != stack.pop())
+            {
                 isPalindrome = false;
                 break;
             }
